@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.submenu_link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  --tw-text-opacity: 1;
+  color: rgb(63 63 70 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  @apply dark:text-white;
+}
+
+.submenu_link:hover {
+  --tw-text-opacity: 1;
+  color: #22c55e;
+}
+
+.mobile-menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+.mobile-menu__wrapper {
+  display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-menu__submenu {
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-top: 0.875rem;
+}
+
+.mobile-menu__submenu > :not(:first-child) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.875rem * (1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
+}
+
+.mobile-menu__wrapper--open {
+  @apply text-green-500;
+}
+
+.mobile-menu__wrapper--open svg {
+  @apply -rotate-90;
+}

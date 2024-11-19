@@ -8,11 +8,23 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      height: {
+        "13": "3.25rem",
+        "5.5": "1.375rem",
+        "25": "6.25rem"
       },
+      width: {
+        "13": "3.25rem",
+        "5.5": "1.375rem",
+      },
+      padding: {
+        "4.5": "1.125rem",
+      },
+      colors: {
+        "darker": "#242a38"
+      }
     },
   },
+  darkMode: "selector",
   plugins: [],
 } satisfies Config;
