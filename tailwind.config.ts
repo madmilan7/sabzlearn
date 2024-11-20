@@ -21,7 +21,8 @@ export default {
         "4.5": "1.125rem",
       },
       colors: {
-        "darker": "#242a38"
+        "darker": "#242a38",
+        "dark": "#333c4c"
       }
     },
   },
